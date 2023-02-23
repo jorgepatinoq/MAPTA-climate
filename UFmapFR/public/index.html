@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8' />
+    <title>Indicateurs de morphologie urbaine - Afrique (OECD CSAO)</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css' />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://api.mapbox.com/mapbox-assembly/v1.5.1/assembly.min.css" rel="stylesheet">
+    <script async defer src="https://api.mapbox.com/mapbox-assembly/v1.5.1/assembly.js"></script>
+    <link rel="stylesheet" href="../src/main.css"/>
+</head>
+
+<body>
+    <!-- add toggle layer menu -->
+    <nav id="menu"></nav>
+
+    <!-- add map -->
+    <div id='map'></div>
+    
+    <!-- add legend container -->
+    <div 
+        style="
+            border: 1px solid rgb(201, 185, 159); 
+            border-radius: 4px;"
+            >
+        <div style="width: 50%;">
+            <!-- add legend title -->
+            <!-- Sprawl -->
+            <div id='legend' class='legend'>
+                <strong>
+                    Étalement
+                </strong>        
+            </div>
+            <!-- add legend dots and labels -->
+            <div>
+                <span class='dot' 
+                 style="background-color: rgba(252, 197, 192, 1);
+                        border-color: rgba(252, 197, 192, 1);
+                        ">
+                </span>
+                <span class="label" style="margin-left: 5px;">Moins de 1</span>
+                <span class='dot' 
+                 style="background-color: rgba(250, 159, 181, 1);
+                        border-color: rgba(250, 159, 181, 1);
+                        ">
+                </span>
+                <span class="label" style="margin-left: 5px;">1 - 1.5</span>
+                <span class='dot' 
+                 style="background-color: rgba(247, 104, 161, 1);
+                        border-color: rgba(247, 104, 161, 1);
+                        ">
+                </span>
+                <span class="label" style="margin-left: 5px;">1.5 - 2</span>
+                <span class='dot' 
+                 style="background-color: rgba(197, 27, 138, 1);
+                        border-color: rgba(197, 27, 138, 1);
+                        ">
+                </span>
+                <span class="label" style="margin-left: 5px;">2 - 2.5</span>
+                <span class='dot' 
+                 style="background-color: rgba(122, 1, 119, 1);
+                        border-color: rgba(122, 1, 119, 1);
+                        ">
+                </span>
+                <span class="label" style="margin-left: 5px;">Plus de 2.5</span>
+            </div>
+
+            <!-- Elongation -->
+            <div id='legend' class='legend'>
+                <strong>
+                    Allongement
+                </strong>        
+            </div>
+            </div>
+            <!-- add legend dots and labels -->
+            <div>
+                <span class='dot' 
+                 style="background-color: rgba(254, 217, 142, 1);
+                        border-color: rgba(254, 217, 142, 1);
+                        ">
+                </span>
+                <span class="label" style="margin-left: 5px;">Moins de 5</span>
+                <span class='dot' 
+                 style="background-color: rgba(254, 153, 41, 1);
+                        border-color: rgba(254, 153, 41, 1);
+                        ">
+                </span>
+                <span class="label" style="margin-left: 5px;">5 - 10</span>
+                <span class='dot' 
+                 style="background-color: rgba(217, 95, 14, 1);
+                        border-color: rgba(217, 95, 14, 1);
+                        ">
+                </span>
+                <span class="label" style="margin-left: 5px;">10 - 15</span>
+                <span class='dot' 
+                 style="background-color: rgba(153, 52, 4, 1);
+                        border-color: rgba(153, 52, 4, 1);
+                        ">
+                </span>
+                <span class="label" style="margin-left: 5px;">Plus de 15</span>
+            </div>
+            <span class="label"></span>
+        </div>
+    </div> 
+    <script src="../src/index.js"></script>   
+</body>
+
+</html>
